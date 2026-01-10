@@ -13,8 +13,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "BASE Open House - Landing Page Options",
-  description: "Bay Area String Ensembles - Landing Page Design Directory",
+  title: "BASE Open House - January 31st | Bay Area String Ensembles",
+  description: "Bay Area String Ensembles - Open House Event",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

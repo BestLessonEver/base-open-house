@@ -2,9 +2,9 @@ import Image from "next/image";
 import RegistrationForm from "@/components/RegistrationForm";
 
 export const metadata = {
-  title: "BASE Open House - January 31st | Bay Area String Ensembles",
+  title: "Bay Area String Ensembles Open House - Sat, Jan 31st",
   description:
-    "Join us for the BASE Open House and discover the joy of string music. Meet Director Lyndon Wang and learn about violin, viola, and cello programs.",
+    "Join us for the Bay Area String Ensembles Open House to learn more about the new program for Friendswood, FISD, CCISD, Leaguee City, and Webster. Meet Director Lyndon Wang and learn about our new programs.",
 };
 
 export default function HomePage() {
@@ -56,7 +56,7 @@ export default function HomePage() {
           <div>
             <div className="inline-block px-4 py-2 bg-[#d4a574]/10 rounded-full mb-6">
               <p className="text-[#d4a574] text-sm font-medium">
-                January 31st, 2025 | 10am - 12pm
+                Sat, January 31st, 2025 | 10am - 12pm
               </p>
             </div>
 
@@ -64,13 +64,13 @@ export default function HomePage() {
               <span className="text-white">Open House</span>
               <br />
               <span className="text-[#d4a574] font-[var(--font-playfair)] italic">
-                New Local Strings Program
+                Friendswood Strings Program
               </span>
             </h1>
 
             <p className="text-xl text-white/70 mb-8 leading-relaxed">
               Join us for the Bay Area String Ensembles Open House. Meet our
-              director, explore instruments, and start your musical journey.
+              director, explore the instruments, and find out if you're ready to start.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -124,7 +124,7 @@ export default function HomePage() {
               {/* Quote card */}
               <div className="absolute -bottom-8 -right-4 md:-right-8 bg-[#d4a574] text-[#0f172a] p-6 rounded-2xl max-w-xs shadow-xl">
                 <p className="italic leading-relaxed">
-                  &quot;Every child has the potential to create beautiful music.&quot;
+                  &quot;Music is so exciting to me, and it's a joy to share that excitment with new students&quot;
                 </p>
                 <p className="mt-3 text-sm opacity-70">— Lyndon Wang</p>
               </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
             {/* Director Info */}
             <div className="order-1 md:order-2">
               <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
-                Your Guide to Musical Excellence
+                Our Director
               </p>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Meet Lyndon Wang
@@ -325,14 +325,12 @@ export default function HomePage() {
       <footer className="py-12 bg-[#0a0f1a] text-white border-t border-[#d4a574]/10">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a574] to-[#1e3a5f] flex items-center justify-center">
-              <span className="text-white font-bold">B</span>
-            </div>
-            <span className="font-bold text-xl">BASE</span>
+            
+           
           </div>
           <p className="text-white/60 mb-4">Bay Area String Ensembles</p>
           <p className="text-white/40 text-sm">
-            BLE Studios | 3222 FM 528, Friendswood, TX 77546
+            Best Lesson Ever | 3222 FM 528, Friendswood, TX 77546
           </p>
         </div>
       </footer>

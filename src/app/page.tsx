@@ -1,167 +1,358 @@
-"use client";
+import RegistrationForm from "@/components/RegistrationForm";
 
-import Link from "next/link";
+export const metadata = {
+  title: "BASE Open House - January 31st | Bay Area String Ensembles",
+  description:
+    "Join us for the BASE Open House and discover the joy of string music. Meet Director Lyndon Wang and learn about violin, viola, and cello programs.",
+};
 
-const landingPages = [
-  {
-    id: 1,
-    slug: "midnight-crescendo",
-    title: "Midnight Crescendo",
-    description:
-      "Deep navy blues with gold accents. Bold typography with strong visual hierarchy. Premium, sophisticated feel.",
-    colors: ["#0f172a", "#1e3a5f", "#d4a574"],
-    preview: "Deep blue gradient hero with gold CTA buttons",
-  },
-  {
-    id: 2,
-    slug: "warm-resonance",
-    title: "Warm Resonance",
-    description:
-      "Rich burgundy and warm amber tones. Inviting and approachable while maintaining elegance. Emphasizes community.",
-    colors: ["#7c2d36", "#f59e0b", "#faf7f2"],
-    preview: "Warm burgundy sections with amber highlights",
-  },
-  {
-    id: 3,
-    slug: "modern-harmony",
-    title: "Modern Harmony",
-    description:
-      "Clean black and white base with strategic color accents. Maximum contrast, ultra-modern. Professional and crisp.",
-    colors: ["#0a0a0a", "#ffffff", "#2563eb"],
-    preview: "High contrast monochrome with blue accents",
-  },
-];
-
-export default function ShowcasePage() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Header */}
-      <header className="border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="flex items-center gap-4">
-            {/* Logo placeholder */}
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#d4a574] to-[#7c2d36] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">B</span>
+    <div className="min-h-screen bg-[#0f172a] text-white font-[var(--font-inter)]">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-40 bg-[#0f172a]/90 backdrop-blur-md border-b border-[#d4a574]/10">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a574] to-[#1e3a5f] flex items-center justify-center">
+              <span className="text-white font-bold">B</span>
             </div>
-            <div>
-              <h1 className="text-2xl font-bold tracking-tight">
-                Landing Page Options
-              </h1>
-              <p className="text-white/60 text-sm">
-                Bay Area String Ensembles
+            <span className="font-bold text-xl text-white">BASE</span>
+          </div>
+          <div className="hidden md:flex items-center gap-8 text-sm">
+            <a href="#about" className="text-white/70 hover:text-[#d4a574] transition-colors">
+              About
+            </a>
+            <a href="#instruments" className="text-white/70 hover:text-[#d4a574] transition-colors">
+              Instruments
+            </a>
+            <a href="#details" className="text-white/70 hover:text-[#d4a574] transition-colors">
+              Details
+            </a>
+            <a
+              href="#register"
+              className="px-5 py-2 bg-[#d4a574] text-[#0f172a] rounded-full hover:bg-[#e8c9a0] transition-colors font-medium"
+            >
+              Register
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-20">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#0f172a]" />
+
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-[#d4a574]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-0 w-72 h-72 bg-[#1e3a5f]/20 rounded-full blur-3xl" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-block px-4 py-2 bg-[#d4a574]/10 rounded-full mb-6">
+              <p className="text-[#d4a574] text-sm font-medium">
+                January 31st, 2025 | 10am - 12pm
               </p>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <span className="text-white">Discover the</span>
+              <br />
+              <span className="text-[#d4a574] font-[var(--font-playfair)] italic">
+                Joy of Music
+              </span>
+            </h1>
+
+            <p className="text-xl text-white/70 mb-8 leading-relaxed">
+              Join us for the Bay Area String Ensembles Open House. Meet our
+              director, explore instruments, and start your musical journey.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#register"
+                className="px-8 py-4 bg-[#d4a574] text-[#0f172a] font-semibold rounded-xl hover:bg-[#e8c9a0] transition-all duration-200 text-center shadow-lg shadow-[#d4a574]/20"
+              >
+                Register for Free
+              </a>
+              <a
+                href="#about"
+                className="px-8 py-4 border-2 border-[#d4a574]/30 text-[#d4a574] rounded-xl hover:bg-[#d4a574]/5 transition-all duration-200 text-center"
+              >
+                Meet the Director
+              </a>
+            </div>
+          </div>
+
+          {/* Hero Image Placeholder */}
+          <div className="relative hidden md:block">
+            <div className="aspect-square rounded-3xl bg-gradient-to-br from-[#1e3a5f] to-[#d4a574] p-1">
+              <div className="w-full h-full rounded-3xl bg-[#0f172a] flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="text-8xl mb-4">🎻</div>
+                  <p className="text-[#d4a574]/40 text-sm">Hero Image</p>
+                </div>
+              </div>
+            </div>
+            {/* Floating badge */}
+            <div className="absolute -bottom-6 -left-6 bg-[#1e3a5f] rounded-2xl p-4 shadow-xl border border-[#d4a574]/20">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-[#d4a574]/20 flex items-center justify-center">
+                  <span className="text-2xl">🎵</span>
+                </div>
+                <div>
+                  <p className="font-bold text-white">All Levels</p>
+                  <p className="text-sm text-white/60">Welcome</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-3">Open House Event</h2>
-          <p className="text-white/60 text-lg max-w-2xl">
-            Review and compare different landing page designs for the January
-            31st Open House event. Click any option to view the full page
-            preview.
-          </p>
-        </div>
-
-        {/* Landing Page Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {landingPages.map((page) => (
-            <Link
-              key={page.id}
-              href={`/${page.slug}`}
-              className="group block"
-            >
-              <div className="rounded-xl border border-white/10 bg-white/5 overflow-hidden transition-all duration-300 hover:border-white/20 hover:bg-white/10 hover:shadow-xl hover:shadow-white/5 hover:-translate-y-1">
-                {/* Color Preview Bar */}
-                <div className="h-32 relative overflow-hidden">
-                  <div
-                    className="absolute inset-0 flex"
-                    style={{
-                      background: `linear-gradient(135deg, ${page.colors[0]} 0%, ${page.colors[1]} 50%, ${page.colors[2]} 100%)`,
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-xs text-white/80 bg-black/30 px-2 py-1 rounded">
-                      {page.preview}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Card Content */}
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-semibold group-hover:text-[#d4a574] transition-colors">
-                      {page.title}
-                    </h3>
-                    <span className="text-white/40 text-sm">
-                      Option {page.id}
-                    </span>
-                  </div>
-                  <p className="text-white/60 text-sm leading-relaxed mb-4">
-                    {page.description}
-                  </p>
-
-                  {/* Color Swatches */}
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-white/40 mr-2">Colors:</span>
-                    {page.colors.map((color, i) => (
-                      <div
-                        key={i}
-                        className="w-6 h-6 rounded-full border border-white/20"
-                        style={{ backgroundColor: color }}
-                        title={color}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Hover indicator */}
-                <div className="px-5 pb-4">
-                  <div className="flex items-center text-sm text-white/40 group-hover:text-[#d4a574] transition-colors">
-                    <span>View full page</span>
-                    <svg
-                      className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+      {/* Director Section */}
+      <section id="about" className="py-24 bg-[#1e293b]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Director Image */}
+            <div className="relative order-2 md:order-1">
+              <div className="aspect-[3/4] rounded-3xl bg-gradient-to-b from-[#1e3a5f] to-[#0f172a] overflow-hidden border border-[#d4a574]/20">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-32 h-32 rounded-full bg-[#d4a574]/10 mx-auto mb-4 flex items-center justify-center">
+                      <svg
+                        className="w-16 h-16 text-[#d4a574]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-[#d4a574]/40 text-sm">Director Photo</p>
                   </div>
                 </div>
               </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Info Footer */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <h4 className="font-medium mb-1">Event Details</h4>
-              <p className="text-white/60 text-sm">
-                Saturday, January 31st, 2025 | 10am - 12pm
-              </p>
-              <p className="text-white/60 text-sm">
-                BLE Studios, 3222 FM 528, Friendswood, TX 77546
-              </p>
+              {/* Quote card */}
+              <div className="absolute -bottom-8 -right-4 md:-right-8 bg-[#d4a574] text-[#0f172a] p-6 rounded-2xl max-w-xs shadow-xl">
+                <p className="italic leading-relaxed">
+                  &quot;Every child has the potential to create beautiful music.&quot;
+                </p>
+                <p className="mt-3 text-sm opacity-70">— Lyndon Wang</p>
+              </div>
             </div>
-            <div className="text-white/40 text-sm">
-              <p>Director: Lyndon Wang</p>
-              <p>Instruments: Violin, Viola, Cello</p>
+
+            {/* Director Info */}
+            <div className="order-1 md:order-2">
+              <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
+                Your Guide to Musical Excellence
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Meet Lyndon Wang
+              </h2>
+              <div className="space-y-4 text-white/70 text-lg leading-relaxed">
+                <p>
+                  As the director of Bay Area String Ensembles, Lyndon Wang has
+                  dedicated his career to nurturing young musicians and building
+                  a supportive community for string education.
+                </p>
+                <p>
+                  At the open house, you&apos;ll have the opportunity to meet Lyndon
+                  personally, ask questions about the program, and learn about
+                  our approach to music education.
+                </p>
+              </div>
+
+              <div className="mt-10 flex flex-wrap gap-4">
+                {["Violin", "Viola", "Cello"].map((instrument) => (
+                  <span
+                    key={instrument}
+                    className="px-4 py-2 bg-[#d4a574]/10 text-[#d4a574] rounded-full text-sm font-medium border border-[#d4a574]/20"
+                  >
+                    {instrument}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* Instruments Section */}
+      <section id="instruments" className="py-24 bg-[#0f172a]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
+              Find Your Voice
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Explore Our Instruments
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Violin",
+                tagline: "The Storyteller",
+                description:
+                  "Express yourself through the violin's soaring melodies and versatile range.",
+              },
+              {
+                name: "Viola",
+                tagline: "The Heart",
+                description:
+                  "Discover the viola's warm, rich voice that adds depth to any ensemble.",
+              },
+              {
+                name: "Cello",
+                tagline: "The Foundation",
+                description:
+                  "Ground yourself in the cello's powerful, resonant tones.",
+              },
+            ].map((instrument) => (
+              <div
+                key={instrument.name}
+                className="group bg-[#1e293b] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#d4a574]/10 hover:border-[#d4a574]/30"
+              >
+                <div
+                  className="w-16 h-16 rounded-2xl mb-6 flex items-center justify-center text-3xl bg-[#d4a574]/10"
+                >
+                  🎻
+                </div>
+                <p
+                  className="text-sm font-medium mb-2 text-[#d4a574]"
+                >
+                  {instrument.tagline}
+                </p>
+                <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#d4a574] transition-colors">
+                  {instrument.name}
+                </h3>
+                <p className="text-white/60 leading-relaxed">
+                  {instrument.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-white/50 bg-[#d4a574]/10 inline-block px-6 py-3 rounded-full">
+              Not sure? We&apos;ll help you choose at the open house!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Event Details Section */}
+      <section id="details" className="py-24 bg-[#1e293b]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
+              Mark Your Calendar
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">Event Details</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-[#0f172a]/50 backdrop-blur rounded-3xl p-8 text-center border border-[#d4a574]/10">
+              <div className="w-16 h-16 rounded-full bg-[#d4a574] mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#0f172a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">Date & Time</h3>
+              <p className="text-white/80">Saturday, January 31st</p>
+              <p className="text-white/80">10:00 AM - 12:00 PM</p>
+            </div>
+
+            <div className="bg-[#0f172a]/50 backdrop-blur rounded-3xl p-8 text-center border border-[#d4a574]/10">
+              <div className="w-16 h-16 rounded-full bg-[#d4a574] mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#0f172a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">Location</h3>
+              <p className="text-white/80">BLE Studios</p>
+              <p className="text-white/80">3222 FM 528</p>
+              <p className="text-white/80">Friendswood, TX 77546</p>
+            </div>
+
+            <div className="bg-[#0f172a]/50 backdrop-blur rounded-3xl p-8 text-center border border-[#d4a574]/10">
+              <div className="w-16 h-16 rounded-full bg-[#d4a574] mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#0f172a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">What&apos;s Included</h3>
+              <p className="text-white/80">Free admission</p>
+              <p className="text-white/80">Rental info available</p>
+              <p className="text-white/80">All levels welcome</p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href="https://maps.google.com/?q=3222+FM+528+Friendswood+TX+77546"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#d4a574] text-[#0f172a] rounded-full font-medium hover:bg-[#e8c9a0] transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Registration Section */}
+      <section id="register" className="py-24 bg-[#0f172a]">
+        <div className="max-w-2xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
+              Join Our Community
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Register Today
+            </h2>
+            <p className="text-white/60 text-lg">
+              Take the first step in your child&apos;s musical journey.
+            </p>
+          </div>
+
+          <div className="bg-[#1e293b] rounded-3xl p-8 shadow-xl border border-[#d4a574]/10">
+            <RegistrationForm
+              theme="dark"
+              accentColor="#d4a574"
+              buttonBgColor="#d4a574"
+              buttonTextColor="#0f172a"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-[#0a0f1a] text-white border-t border-[#d4a574]/10">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a574] to-[#1e3a5f] flex items-center justify-center">
+              <span className="text-white font-bold">B</span>
+            </div>
+            <span className="font-bold text-xl">BASE</span>
+          </div>
+          <p className="text-white/60 mb-4">Bay Area String Ensembles</p>
+          <p className="text-white/40 text-sm">
+            BLE Studios | 3222 FM 528, Friendswood, TX 77546
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

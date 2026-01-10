@@ -1,12 +1,28 @@
 import { Resend } from "resend";
 
-export const resend = new Resend(process.env.RESEND_API_KEY);
+let resendInstance: Resend | null = null;
+
+function getResend(): Resend {
+  if (resendInstance) {
+    return resendInstance;
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+
+  resendInstance = new Resend(apiKey);
+  return resendInstance;
+}
 
 export async function sendConfirmationEmail(
   to: string,
   parentName: string,
   studentName: string
 ) {
+  const resend = getResend();
+
   const { data, error } = await resend.emails.send({
     from: "BASE Open House <onboarding@resend.dev>",
     to: [to],

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase, Registration } from "@/lib/supabase";
+import { getSupabase, Registration } from "@/lib/supabase";
 import { sendConfirmationEmail } from "@/lib/resend";
 
 export async function POST(request: NextRequest) {
@@ -39,6 +39,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "Student age must be between 3 and 18" },
         { status: 400 }
+      );
+    }
+
+    // Get Supabase client at runtime
+    let supabase;
+    try {
+      supabase = getSupabase();
+    } catch {
+      return NextResponse.json(
+        { error: "Database not configured" },
+        { status: 500 }
       );
     }
 

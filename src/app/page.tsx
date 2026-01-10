@@ -44,9 +44,21 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-16 md:pt-20">
+      <section className="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden">
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#0f172a]" />
+
+        {/* Mobile background image */}
+        <div className="absolute inset-0 md:hidden">
+          <Image
+            src="/hero.png"
+            alt=""
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/80 to-[#0f172a]/60" />
+        </div>
 
         {/* Decorative elements */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-[#d4a574]/10 rounded-full blur-3xl" />
@@ -89,8 +101,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative mt-8 md:mt-0">
+          {/* Hero Image - Desktop only */}
+          <div className="relative hidden md:block">
             <div className="aspect-square rounded-3xl bg-gradient-to-br from-[#1e3a5f] to-[#d4a574] p-1">
               <div className="relative w-full h-full rounded-3xl overflow-hidden">
                 <Image

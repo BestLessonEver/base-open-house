@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RegistrationForm from "@/components/RegistrationForm";
 
 export const metadata = {
@@ -84,14 +85,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero Image Placeholder */}
+          {/* Hero Image */}
           <div className="relative hidden md:block">
             <div className="aspect-square rounded-3xl bg-gradient-to-br from-[#1e3a5f] to-[#d4a574] p-1">
-              <div className="w-full h-full rounded-3xl bg-[#0f172a] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-8xl mb-4">🎻</div>
-                  <p className="text-[#d4a574]/40 text-sm">Hero Image</p>
-                </div>
+              <div className="relative w-full h-full rounded-3xl overflow-hidden">
+                <Image
+                  src="/hero.png"
+                  alt="String instruments"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
             {/* Floating badge */}
@@ -116,27 +120,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Director Image */}
             <div className="relative order-2 md:order-1">
-              <div className="aspect-[3/4] rounded-3xl bg-gradient-to-b from-[#1e3a5f] to-[#0f172a] overflow-hidden border border-[#d4a574]/20">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 rounded-full bg-[#d4a574]/10 mx-auto mb-4 flex items-center justify-center">
-                      <svg
-                        className="w-16 h-16 text-[#d4a574]"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-[#d4a574]/40 text-sm">Director Photo</p>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-[#d4a574]/20">
+                <Image
+                  src="/headshot.png"
+                  alt="Director Lyndon Wang"
+                  width={600}
+                  height={800}
+                  className="object-cover w-full h-full"
+                />
               </div>
               {/* Quote card */}
               <div className="absolute -bottom-8 -right-4 md:-right-8 bg-[#d4a574] text-[#0f172a] p-6 rounded-2xl max-w-xs shadow-xl">

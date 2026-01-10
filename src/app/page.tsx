@@ -54,10 +54,10 @@ export default function HomePage() {
             src="/hero.png"
             alt=""
             fill
-            className="object-cover opacity-40"
+            className="object-cover object-right-top opacity-40"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/80 to-[#0f172a]/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0f172a]/70 to-[#0f172a]/40" />
         </div>
 
         {/* Decorative elements */}

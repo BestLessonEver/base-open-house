@@ -44,7 +44,7 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20">
+      <section className="relative min-h-screen flex items-center pt-16 md:pt-20">
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#0f172a]" />
 
@@ -90,7 +90,7 @@ export default function HomePage() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative hidden md:block">
+          <div className="relative mt-8 md:mt-0">
             <div className="aspect-square rounded-3xl bg-gradient-to-br from-[#1e3a5f] to-[#d4a574] p-1">
               <div className="relative w-full h-full rounded-3xl overflow-hidden">
                 <Image
@@ -281,7 +281,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <a
-              href="https://maps.google.com/?q=3222+FM+528+Friendswood+TX+77546"
+              href="https://maps.app.goo.gl/W5sVkbBEhUsYq39E7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#d4a574] text-[#0f172a] rounded-full font-medium hover:bg-[#e8c9a0] transition-colors"

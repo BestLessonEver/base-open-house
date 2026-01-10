@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* BASE Brand Colors */
+  --base-navy: #0f172a;
+  --base-navy-light: #1e293b;
+  --base-blue: #1e3a5f;
+  --base-blue-light: #2563eb;
+  --base-gold: #d4a574;
+  --base-gold-light: #e8c9a0;
+  --base-burgundy: #7c2d36;
+  --base-burgundy-light: #9f3d47;
+  --base-cream: #faf7f2;
+  --base-amber: #f59e0b;
 }
 
 @theme inline {
@@ -10,6 +22,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom colors */
+  --color-base-navy: var(--base-navy);
+  --color-base-navy-light: var(--base-navy-light);
+  --color-base-blue: var(--base-blue);
+  --color-base-blue-light: var(--base-blue-light);
+  --color-base-gold: var(--base-gold);
+  --color-base-gold-light: var(--base-gold-light);
+  --color-base-burgundy: var(--base-burgundy);
+  --color-base-burgundy-light: var(--base-burgundy-light);
+  --color-base-cream: var(--base-cream);
+  --color-base-amber: var(--base-amber);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +46,55 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
 }

@@ -1,6 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase, Registration } from "@/lib/supabase";
 import { sendConfirmationEmail } from "@/lib/resend";
+
+interface Registration {
+  parent_name: string;
+  email: string;
+  phone: string;
+  student_name: string;
+  student_age: number;
+  instrument_interest: string;
+  comments?: string;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,47 +51,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get Supabase client at runtime
-    let supabase;
-    try {
-      supabase = getSupabase();
-    } catch {
-      return NextResponse.json(
-        { error: "Database not configured" },
-        { status: 500 }
-      );
-    }
-
-    // Insert into Supabase
-    const { data, error: dbError } = await supabase
-      .from("base_registrations")
-      .insert([
-        {
-          parent_name: body.parent_name,
-          email: body.email,
-          phone: body.phone,
-          student_name: body.student_name,
-          student_age: body.student_age,
-          instrument_interest: body.instrument_interest,
-          comments: body.comments || null,
-        },
-      ])
-      .select()
-      .single();
-
-    if (dbError) {
-      // Check for unique constraint violation (duplicate email)
-      if (dbError.code === "23505") {
-        return NextResponse.json(
-          { error: "This email is already registered for the event." },
-          { status: 409 }
-        );
+    // Send to n8n webhook
+    const webhookUrl = process.env.N8N_WEBHOOK_URL;
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...body,
+            submitted_at: new Date().toISOString(),
+          }),
+        });
+      } catch (webhookError) {
+        console.error("Webhook error:", webhookError);
+        // Continue even if webhook fails
       }
-      console.error("Database error:", dbError);
-      return NextResponse.json(
-        { error: "Failed to save registration" },
-        { status: 500 }
-      );
     }
 
     // Send confirmation email
@@ -96,7 +80,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: "Registration successful!",
-      data,
     });
   } catch (error) {
     console.error("Registration error:", error);

@@ -13,11 +13,15 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-[#0f172a]/90 backdrop-blur-md border-b border-[#d4a574]/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a574] to-[#1e3a5f] flex items-center justify-center">
-              <span className="text-white font-bold">B</span>
-            </div>
-            <span className="font-bold text-xl text-white">BASE</span>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/favicon.png"
+              alt="BLE Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+            <span className="font-bold text-lg text-white">Bay Area String Ensembles</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm">
             <a href="#about" className="text-white/70 hover:text-[#d4a574] transition-colors">
@@ -57,10 +61,10 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Discover the</span>
+              <span className="text-white">Open House</span>
               <br />
               <span className="text-[#d4a574] font-[var(--font-playfair)] italic">
-                Joy of Music
+                New Local Strings Program
               </span>
             </h1>
 
@@ -96,18 +100,6 @@ export default function HomePage() {
                   className="object-cover"
                   priority
                 />
-              </div>
-            </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-[#1e3a5f] rounded-2xl p-4 shadow-xl border border-[#d4a574]/20">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#d4a574]/20 flex items-center justify-center">
-                  <span className="text-2xl">🎵</span>
-                </div>
-                <div>
-                  <p className="font-bold text-white">All Levels</p>
-                  <p className="text-sm text-white/60">Welcome</p>
-                </div>
               </div>
             </div>
           </div>

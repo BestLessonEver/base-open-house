@@ -48,16 +48,17 @@ export default function HomePage() {
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#0f172a]" />
 
-        {/* Mobile background image */}
-        <div className="absolute inset-0 md:hidden">
+        {/* Mobile hero image - positioned top-right */}
+        <div className="absolute top-16 -right-12 w-64 h-64 md:hidden">
           <Image
             src="/hero.png"
             alt=""
             fill
-            className="object-cover object-right-top opacity-40"
+            className="object-cover object-center opacity-60 rounded-full"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0f172a]/70 to-[#0f172a]/40" />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0f172a] rounded-full" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent rounded-full" />
         </div>
 
         {/* Decorative elements */}

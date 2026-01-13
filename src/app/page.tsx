@@ -288,6 +288,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold mb-2 text-white">What&apos;s Included</h3>
               <p className="text-white/80">Free admission</p>
               <p className="text-white/80">Rental info available</p>
+              <p className="text-white/80">Learn about our Performance-First Model.</p>
               <p className="text-white/80">All levels welcome</p>
             </div>
           </div>

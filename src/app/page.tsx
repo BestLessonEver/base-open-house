@@ -153,14 +153,15 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-white/70 text-lg leading-relaxed">
                 <p>
-                  As the director of Bay Area String Ensembles, Lyndon Wang has
-                  dedicated his career to nurturing young musicians and building
-                  a supportive community for string education.
+                  I help classically trained string players bridge the gap to the
+                  modern stage—mastering the technical foundation they need while
+                  gaining the skills to play pop, worship music, and contemporary
+                  hits with confidence.
                 </p>
                 <p>
-                  At the open house, you&apos;ll have the opportunity to meet Lyndon
-                  personally, ask questions about the program, and learn about
-                  our approach to music education.
+                  My mission at BASE is to transform students into versatile
+                  performers who are just as comfortable reading a concerto as
+                  they are improvising over a chord chart.
                 </p>
               </div>
 

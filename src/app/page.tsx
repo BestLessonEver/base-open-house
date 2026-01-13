@@ -74,16 +74,16 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Open House</span>
+              <span className="text-white">A Modern Approach to Strings</span>
               <br />
               <span className="text-[#d4a574] font-[var(--font-playfair)] italic">
-                Friendswood Strings Program
+                Join the Bay Area String Ensembles.
               </span>
             </h1>
 
             <p className="text-xl text-white/70 mb-8 leading-relaxed">
-              Join us for the Bay Area String Ensembles Open House. Meet our
-              director, explore the instruments, and find out if you're ready to start.
+              Find your voice at the Bay Area String Ensembles Open House. Meet our director,
+              explore the instruments, and find out if you're ready to start.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

@@ -189,6 +189,10 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Explore Our Instruments
             </h2>
+            <p className="mt-4 text-white/60 text-lg max-w-2xl mx-auto">
+              At the Open House, students will have the chance to hold and try these
+              instruments for the first time.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">

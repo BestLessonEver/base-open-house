@@ -21,7 +21,7 @@ export default function HomePage() {
               height={40}
               className="rounded-full"
             />
-            <span className="font-bold text-lg text-white"></span>
+            <span className="font-bold text-lg text-white">BASE</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm">
             <a href="#about" className="text-white/70 hover:text-[#d4a574] transition-colors">
@@ -69,7 +69,7 @@ export default function HomePage() {
           <div>
             <div className="inline-block px-4 py-2 bg-[#d4a574]/10 rounded-full mb-6">
               <p className="text-[#d4a574] text-sm font-medium">
-                Best Lesson Ever! 3222 FM 528, Friendswood, TX
+                Saturday, January 31st | 10 AM - 12 PM
               </p>
             </div>
 
@@ -82,7 +82,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-xl text-white/70 mb-8 leading-relaxed">
-              Friendswood's newest string program . We invite you to meet our director,
+              Friendswood's newest string program for beginners to intermediate players. We invite you to meet our director,
               explore the instruments, and sign up for our first season.
             </p>
 
@@ -163,16 +163,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                {["Violin", "Viola", "Cello"].map((instrument) => (
-                  <span
-                    key={instrument}
-                    className="px-4 py-2 bg-[#d4a574]/10 text-[#d4a574] rounded-full text-sm font-medium border border-[#d4a574]/20"
-                  >
-                    {instrument}
-                  </span>
-                ))}
-              </div>
+              
             </div>
           </div>
         </div>
@@ -183,10 +174,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
-              Find Your Voice
+              Find Your Sound
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Explore Our Instruments
+              Explore The Stringed Instruments
             </h2>
             <p className="mt-4 text-white/60 text-lg max-w-2xl mx-auto">
               At the Open House, students will have the chance to hold and try these
@@ -291,7 +282,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold mb-2 text-white">What&apos;s Included</h3>
               <p className="text-white/80">Free admission</p>
               <p className="text-white/80">Rental info available</p>
-              <p className="text-white/80">Learn about our Performance-First Model.</p>
+              <p className="text-white/80">Learn about our Fun-First Model.</p>
               <p className="text-white/80">All levels welcome</p>
             </div>
           </div>

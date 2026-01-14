@@ -16,8 +16,8 @@ A single-page marketing website for the Bay Area String Ensembles (BASE) open ho
 
 ### Technical Stack
 - Next.js 14+ (App Router)
-- Supabase (registration storage)
-- Resend (email confirmations)
+- Resend (email confirmations with BCC to team)
+- Optional: n8n webhook integration
 - Tailwind CSS
 - Deploy to Netlify
 
@@ -50,8 +50,8 @@ A single-page marketing website for the Bay Area String Ensembles (BASE) open ho
 - Questions/Comments (optional)
 
 **Behavior:**
-- Save to Supabase `base_registrations` table
-- Send confirmation email via Resend
+- Send confirmation email via Resend (BCC to bestlessoninfo@gmail.com and lwang9480@gmail.com)
+- Optional webhook to n8n for additional processing
 - Show success message
 - Handle errors gracefully
 
@@ -66,19 +66,10 @@ A single-page marketing website for the Bay Area String Ensembles (BASE) open ho
 - Fast performance
 - High-quality imagery throughout
 
-### Database Schema
-```sql
-Table: base_registrations
-- id (uuid, primary key)
-- created_at (timestamp)
-- parent_name (text)
-- email (text, unique)
-- phone (text)
-- student_name (text)
-- student_age (integer)
-- instrument_interest (text)
-- comments (text, nullable)
-```
+### Data Flow
+- Registration data sent via confirmation email (BCC to team)
+- Optional webhook integration to n8n for CRM/workflow automation
+- No direct database storage required
 
 ### Success Criteria
 - Beautiful, professional appearance

@@ -49,7 +49,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#0f172a]" />
 
         {/* Mobile hero image - positioned top-right */}
-        <div className="absolute top-16 -right-12 w-64 h-64 md:hidden">
+        <div className="absolute top-16 -right-4 w-[332px] h-[332px] md:hidden">
           <Image
             src="/hero.png"
             alt=""

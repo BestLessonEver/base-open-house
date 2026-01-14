@@ -124,7 +124,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Director Image */}
-            <div className="relative order-2 md:order-1">
+            <div className="relative order-1">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-[#d4a574]/20">
                 <Image
                   src="/headshot.png"
@@ -144,7 +144,7 @@ export default function HomePage() {
             </div>
 
             {/* Director Info */}
-            <div className="order-1 md:order-2">
+            <div className="order-2">
               <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
                 Our Director
               </p>

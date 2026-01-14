@@ -149,7 +149,7 @@ export default function HomePage() {
                 Our Director
               </p>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Meet Lyndon Wang
+                Lyndon Wang
               </h2>
               <div className="space-y-4 text-white/70 text-lg leading-relaxed">
                 <p>

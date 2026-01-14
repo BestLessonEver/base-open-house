@@ -123,8 +123,18 @@ export default function HomePage() {
       <section id="about" className="py-24 bg-[#1e293b]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Director Heading - Mobile only */}
+            <div className="md:hidden order-1">
+              <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
+                Our Director
+              </p>
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                Lyndon Wang
+              </h2>
+            </div>
+
             {/* Director Image */}
-            <div className="relative order-1">
+            <div className="relative order-2 md:order-1">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-[#d4a574]/20">
                 <Image
                   src="/headshot.png"
@@ -144,22 +154,25 @@ export default function HomePage() {
             </div>
 
             {/* Director Info */}
-            <div className="order-2">
-              <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
-                Our Director
-              </p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Lyndon Wang
-              </h2>
+            <div className="order-3 md:order-2">
+              {/* Heading - Desktop only */}
+              <div className="hidden md:block">
+                <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
+                  Our Director
+                </p>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Lyndon Wang
+                </h2>
+              </div>
               <div className="space-y-4 text-white/70 text-lg leading-relaxed">
                 <p>
                   With a career spanning 25 years across both the concert hall and the modern studio, Lyndon is dedicated to redefining what it means to be a string player in the 21st century. As the Director of the Bay Area String Ensembles (BASE) at Best Lesson Ever, Lyndon brings a unique, high-energy approach to music education that balances rigorous classical foundations with a vibrant, contemporary edge.</p>
                 <p>
                   Specializing in the "Classical-to-Contemporary Bridge," Lyndon guides students beyond the printed page, teaching them how to master their instruments while exploring the worlds of pop, rock, and worship music. Whether he is coaching a student through a difficult concerto or showing them how to navigate chord charts and improvisation for a church band or a modern remix, his goal is the same: to create confident, versatile musicians who are ready for any stage.</p>
-                
+
               </div>
 
-              
+
             </div>
           </div>
         </div>

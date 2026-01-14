@@ -268,7 +268,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">Location</h3>
-              <p className="text-white/80">BLE Studios</p>
+              <p className="text-white/80">Best Lesson Ever!</p>
               <p className="text-white/80">3222 FM 528</p>
               <p className="text-white/80">Friendswood, TX 77546</p>
             </div>

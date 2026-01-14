@@ -24,7 +24,7 @@ export async function sendConfirmationEmail(
   const resend = getResend();
 
   const { data, error } = await resend.emails.send({
-    from: "BASE Open House <onboarding@resend.dev>",
+    from: "BASE Open House <info@bestlessonever.com>",
     to: [to],
     bcc: ["bestlessoninfo@gmail.com", "lwang9480@gmail.com"],
     subject: "You're Registered for BASE Open House - Jan 31st",

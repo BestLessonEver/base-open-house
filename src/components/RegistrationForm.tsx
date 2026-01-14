@@ -191,7 +191,7 @@ export default function RegistrationForm({
             onChange={handleChange}
             className={inputBaseClasses}
             style={{ "--tw-ring-color": accentColor } as React.CSSProperties}
-            placeholder="Student's full name"
+            placeholder="Student's first name"
           />
         </div>
       </div>

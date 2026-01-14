@@ -26,7 +26,7 @@ export async function sendConfirmationEmail(
   const { data, error } = await resend.emails.send({
     from: "Bay Area String Ensembles <info@bestlessonever.com>",
     to: [to],
-    subject: "Registration for Bay Area String Ensembles Open House - Jan 31st",
+    subject: "Registration for BASE Open House - Jan 31st",
     html: `
       <!DOCTYPE html>
       <html>
@@ -42,7 +42,8 @@ export async function sendConfirmationEmail(
 
           <h2 style="color: #0f172a; margin-bottom: 20px;">Hello ${parentName}!</h2>
 
-          <p>Thank you for registering <strong>${studentName}</strong> for the BASE Open House! We're excited to meet your family and introduce you to our exciting new string program.</p>
+          <p>Thank you for registering <strong>${studentName}</strong> for the BASE Open House! </p>
+          <p>We're excited to meet your family and introduce you to our exciting new string program.</p>
 
           <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 25px 0;">
             <h3 style="color: #0f172a; margin: 0 0 15px 0; font-size: 18px;">Event Details</h3>
@@ -55,10 +56,10 @@ export async function sendConfirmationEmail(
           <h3 style="color: #0f172a;">What to Expect</h3>
           <ul style="padding-left: 20px;">
             <li>Meet Director Lyndon Wang</li>
-            <li>Learn about violin, viola, and cello and try out the instruments.</li>
-            <li>Instrument rental and purchase information</li>
+            <li>Learn about violin, viola, and cello and try out the instruments</li>
+            <li>Instrument rental and purchase information from Lisle Violin Shop</li>
             <li>Tour our facilities</li>
-            <li>Answer Your Questions About Our Program</li>
+            <li>Answer your questions about our program</li>
           </ul>
 
           <div style="background: #0f172a; border-radius: 8px; padding: 20px; margin: 25px 0; text-align: center;">
@@ -66,7 +67,7 @@ export async function sendConfirmationEmail(
           </div>
 
           <p style="color: #666; font-size: 14px;">If you have any questions before the event, please don't hesitate to reach out.</p>
-          <p>Tel: (281) 940-4101</p>
+          <p><a href="tel:281-940-4101">Call Us: 281-940-4101</a></p>
           <p>We look forward to seeing you!</p>
 
           <p style="margin-top: 30px;">

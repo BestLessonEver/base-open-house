@@ -21,7 +21,7 @@ export default function HomePage() {
               height={40}
               className="rounded-full"
             />
-            <span className="font-bold text-lg text-white">BASE</span>
+            <span className="font-bold text-lg text-white">Best Lesson Ever!</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm">
             <a href="#about" className="text-white/70 hover:text-[#d4a574] transition-colors">

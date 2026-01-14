@@ -200,19 +200,19 @@ export default function HomePage() {
                 name: "Violin",
                 tagline: "The Storyteller",
                 description:
-                  "Express yourself through the violin's soaring melodies and versatile range.",
+                  "The violin plays higher than the other string instruments and is often responsible for melody. It’s lightweight, portable, and widely used in orchestras, chamber music, film scores, and modern genres. A common starting instrument with lots of ensemble and performance opportunities.",
               },
               {
                 name: "Viola",
                 tagline: "The Heart",
                 description:
-                  "Discover the viola's warm, rich voice that adds depth to any ensemble.",
+                  "The viola is slightly larger than the violin and tuned lower, giving it a warmer, deeper sound. It often plays harmony and inner lines in ensembles. Great for students who like rich tone, supporting roles, and less crowded competition than violin.",
               },
               {
                 name: "Cello",
                 tagline: "The Foundation",
                 description:
-                  "Ground yourself in the cello's powerful, resonant tones.",
+                  "The cello is played seated and covers both bass lines and lyrical melodies. Its range overlaps the human voice, which makes it expressive and versatile. Used in orchestras, chamber groups, solo repertoire, and contemporary music. Requires more physical space but is very intuitive for many students.",
               },
             ].map((instrument) => (
               <div

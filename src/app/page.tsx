@@ -128,13 +128,13 @@ export default function HomePage() {
               <p className="text-[#d4a574] text-sm uppercase tracking-widest mb-4 font-medium">
                 Our Director
               </p>
-              <h2 className="text-4xl font-bold mb-6 text-white">
+              <h2 className="text-4xl font-bold text-white">
                 Lyndon Wang
               </h2>
             </div>
 
             {/* Director Image */}
-            <div className="relative order-2 md:order-1">
+            <div className="relative order-2 md:order-1 -mt-8 md:mt-0">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden border border-[#d4a574]/20">
                 <Image
                   src="/headshot.png"

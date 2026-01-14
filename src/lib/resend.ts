@@ -26,7 +26,6 @@ export async function sendConfirmationEmail(
   const { data, error } = await resend.emails.send({
     from: "Bay Area String Ensembles <info@bestlessonever.com>",
     to: [to],
-    bcc: ["bestlessoninfo@gmail.com", "lwang9480@gmail.com"],
     subject: "Registration for Bay Area String Ensembles Open House - Jan 31st",
     html: `
       <!DOCTYPE html>
@@ -88,6 +87,71 @@ export async function sendConfirmationEmail(
 
   if (error) {
     console.error("Error sending email:", error);
+    throw error;
+  }
+
+  return data;
+}
+
+export async function sendLeadNotification(registration: {
+  parent_name: string;
+  email: string;
+  phone: string;
+  student_name: string;
+  student_age: number;
+  instrument_interest: string;
+  comments?: string;
+}) {
+  const resend = getResend();
+
+  const { data, error } = await resend.emails.send({
+    from: "BASE Open House <info@bestlessonever.com>",
+    to: ["bestlessoninfo@gmail.com", "lwang9480@gmail.com"],
+    subject: "New Open House Registration",
+    html: `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h2 style="color: #0f172a; margin-bottom: 20px;">New Open House Registration</h2>
+
+          <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 25px 0;">
+            <h3 style="color: #0f172a; margin: 0 0 15px 0; font-size: 18px;">Parent Information</h3>
+            <p style="margin: 8px 0;"><strong>Name:</strong> ${registration.parent_name}</p>
+            <p style="margin: 8px 0;"><strong>Email:</strong> ${registration.email}</p>
+            <p style="margin: 8px 0;"><strong>Phone:</strong> ${registration.phone}</p>
+          </div>
+
+          <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 25px 0;">
+            <h3 style="color: #0f172a; margin: 0 0 15px 0; font-size: 18px;">Student Information</h3>
+            <p style="margin: 8px 0;"><strong>Name:</strong> ${registration.student_name}</p>
+            <p style="margin: 8px 0;"><strong>Age:</strong> ${registration.student_age}</p>
+            <p style="margin: 8px 0;"><strong>Instrument Interest:</strong> ${registration.instrument_interest}</p>
+          </div>
+
+          ${registration.comments ? `
+          <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 25px 0;">
+            <h3 style="color: #0f172a; margin: 0 0 15px 0; font-size: 18px;">Comments/Questions</h3>
+            <p style="margin: 8px 0;">${registration.comments}</p>
+          </div>
+          ` : ''}
+
+          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+
+          <p style="color: #999; font-size: 12px; text-align: center;">
+            Bay Area String Ensembles<br>
+            Open House Registration System
+          </p>
+        </body>
+      </html>
+    `,
+  });
+
+  if (error) {
+    console.error("Error sending lead notification:", error);
     throw error;
   }
 

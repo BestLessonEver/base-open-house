@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sendConfirmationEmail } from "@/lib/resend";
+import { sendConfirmationEmail, sendLeadNotification } from "@/lib/resend";
 
 interface Registration {
   parent_name: string;
@@ -75,6 +75,14 @@ export async function POST(request: NextRequest) {
     } catch (emailError) {
       console.error("Email error:", emailError);
       // Don't fail the registration if email fails
+    }
+
+    // Send lead notification to team
+    try {
+      await sendLeadNotification(body);
+    } catch (leadEmailError) {
+      console.error("Lead notification error:", leadEmailError);
+      // Don't fail the registration if lead notification fails
     }
 
     return NextResponse.json({

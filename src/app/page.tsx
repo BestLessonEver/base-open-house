@@ -21,7 +21,7 @@ export default function HomePage() {
               height={40}
               className="rounded-full"
             />
-            <span className="font-bold text-lg text-white">Bay Area String Ensembles</span>
+            <span className="font-bold text-lg text-white"></span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm">
             <a href="#about" className="text-white/70 hover:text-[#d4a574] transition-colors">
@@ -69,21 +69,21 @@ export default function HomePage() {
           <div>
             <div className="inline-block px-4 py-2 bg-[#d4a574]/10 rounded-full mb-6">
               <p className="text-[#d4a574] text-sm font-medium">
-                Sat, January 31st, 2025 | 10am - 12pm
+                Best Lesson Ever! 3222 FM 528, Friendswood, TX
               </p>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">A Modern Approach to Strings</span>
+              <span className="text-white">Open House</span>
               <br />
               <span className="text-[#d4a574] font-[var(--font-playfair)] italic">
-                Join the Bay Area String Ensembles.
+                Bay Area String Ensembles
               </span>
             </h1>
 
             <p className="text-xl text-white/70 mb-8 leading-relaxed">
-              Find your voice at the Bay Area String Ensembles Open House. Meet our director,
-              explore the instruments, and find out if you're ready to start.
+              Friendswood's newest string program . We invite you to meet our director,
+              explore the instruments, and sign up for our first season.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -137,7 +137,7 @@ export default function HomePage() {
               {/* Quote card */}
               <div className="absolute -bottom-8 -right-4 md:-right-8 bg-[#d4a574] text-[#0f172a] p-6 rounded-2xl max-w-xs shadow-xl">
                 <p className="italic leading-relaxed">
-                  &quot;Music is so exciting to me, and it's a joy to share that excitment with new students&quot;
+                  &quot;I help classically trained string players bridge the gap to the modern stage—mastering the technical foundation they need while gaining the skills to play pop, worship music, and contemporary hits with confidence. My mission at BASE is to transform students into versatile performers who are just as comfortable reading a concerto as they are improvising over a chord chart.&quot;
                 </p>
                 <p className="mt-3 text-sm opacity-70">— Lyndon Wang</p>
               </div>
@@ -153,15 +153,13 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-white/70 text-lg leading-relaxed">
                 <p>
-                  I help classically trained string players bridge the gap to the
-                  modern stage—mastering the technical foundation they need while
-                  gaining the skills to play pop, worship music, and contemporary
-                  hits with confidence.
-                </p>
+                  With a career spanning 25 years across both the concert hall and the modern studio, Lyndon is dedicated to redefining what it means to be a string player in the 21st century. As the Director of the Bay Area String Ensembles (BASE) at Best Lesson Ever, Lyndon brings a unique, high-energy approach to music education that balances rigorous classical foundations with a vibrant, contemporary edge.</p>
                 <p>
-                  My mission at BASE is to transform students into versatile
-                  performers who are just as comfortable reading a concerto as
-                  they are improvising over a chord chart.
+                  Specializing in the "Classical-to-Contemporary Bridge," Lyndon guides students beyond the printed page, teaching them how to master their instruments while exploring the worlds of pop, rock, and worship music. Whether he is coaching a student through a difficult concerto or showing them how to navigate chord charts and improvisation for a church band or a modern remix, his goal is the same: to create confident, versatile musicians who are ready for any stage.</p>
+                <p>
+                  A firm believer in the power of performance-driven learning,Lyndon has developed a curriculum at BASE that focuses on Ensemble Synergy. By integrating modern lead-sheet reading and rhythmic ear training alongside traditional technique, he ensures that students don't just "play" their instruments—they understand the language of music.</p>
+                <p>
+                  When not in the studio,Lyndon is an active creator in the digital music space, developing professional string content and loops that bridge the gap between acoustic excellence and modern production. He resides in Webster with his family, where he is committed to building a world-class string community for the next generation of performers.
                 </p>
               </div>
 
